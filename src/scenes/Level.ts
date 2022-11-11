@@ -4,7 +4,6 @@
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
-import PushOnClick from "../components/PushOnClick";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -20,17 +19,11 @@ export default class Level extends Phaser.Scene {
 
 	editorCreate(): void {
 
-		// fufuSuperDino
-		const fufuSuperDino = this.add.image(400, 235, "FufuSuperDino");
+		// sky
+		this.add.image(400, 300, "sky");
 
-		// text
-		const text = this.add.text(400, 436, "", {});
-		text.setOrigin(0.5, 0.5);
-		text.text = "Hello everyone!";
-		text.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "3em" });
-
-		// fufuSuperDino (components)
-		new PushOnClick(fufuSuperDino);
+		// star
+		this.add.image(310, 252, "star");
 
 		this.events.emit("scene-awake");
 	}

@@ -2,9 +2,42 @@
     "section1": {
         "files": [
             {
+                "url": "assets/bomb.png",
+                "type": "image",
+                "key": "bomb"
+            },
+            {
+                "url": "assets/dude.png",
+                "frameConfig": {
+                    "frameWidth": 32,
+                    "frameHeight": 48,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "dude"
+            },
+            {
                 "url": "assets/FufuSuperDino.png",
                 "type": "image",
                 "key": "FufuSuperDino"
+            },
+            {
+                "url": "assets/platform.png",
+                "type": "image",
+                "key": "platform"
+            },
+            {
+                "url": "assets/sky.png",
+                "type": "image",
+                "key": "sky"
+            },
+            {
+                "url": "assets/star.png",
+                "type": "image",
+                "key": "star"
             }
         ]
     },
@@ -12,6 +45,7 @@
         "app": "Phaser Editor 2D - Asset Pack Editor",
         "contentType": "phasereditor2d.pack.core.AssetContentType",
         "url": "https://phasereditor2d.com",
-        "version": 2
+        "version": 2,
+        "showAllFilesInBlocks": false
     }
 }
