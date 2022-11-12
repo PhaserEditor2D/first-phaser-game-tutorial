@@ -4,6 +4,7 @@
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
+import PlatformPrefab from "./PlatformPrefab";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -22,8 +23,25 @@ export default class Level extends Phaser.Scene {
 		// sky
 		this.add.image(400, 300, "sky");
 
-		// star
-		this.add.image(310, 252, "star");
+		// platform
+		const platform = new PlatformPrefab(this, -39, 309);
+		this.add.existing(platform);
+
+		// platform_1
+		const platform_1 = new PlatformPrefab(this, 512, 440);
+		this.add.existing(platform_1);
+
+		// platform_2
+		const platform_2 = new PlatformPrefab(this, 535, 248);
+		this.add.existing(platform_2);
+
+		// platformPrefab
+		const platformPrefab = new PlatformPrefab(this, 0, 536);
+		this.add.existing(platformPrefab);
+		platformPrefab.scaleX = 2;
+		platformPrefab.scaleY = 2;
+		platformPrefab.tintBottomLeft = 670747;
+		platformPrefab.tintBottomRight = 670747;
 
 		this.events.emit("scene-awake");
 	}
