@@ -26,6 +26,8 @@ export default class Level extends Phaser.Scene {
 		// platform
 		const platform = new PlatformPrefab(this, -39, 309);
 		this.add.existing(platform);
+		platform.scaleX = 1.3706765916721015;
+		platform.scaleY = 1;
 
 		// platform_1
 		const platform_1 = new PlatformPrefab(this, 512, 440);
@@ -35,16 +37,23 @@ export default class Level extends Phaser.Scene {
 		const platform_2 = new PlatformPrefab(this, 535, 248);
 		this.add.existing(platform_2);
 
-		// platformPrefab
-		const platformPrefab = new PlatformPrefab(this, 0, 536);
-		this.add.existing(platformPrefab);
-		platformPrefab.scaleX = 2;
-		platformPrefab.scaleY = 2;
-		platformPrefab.tintBottomLeft = 670747;
-		platformPrefab.tintBottomRight = 670747;
+		// bottomPlatform
+		const bottomPlatform = new PlatformPrefab(this, 0, 536);
+		this.add.existing(bottomPlatform);
+		bottomPlatform.scaleX = 2;
+		bottomPlatform.scaleY = 2;
+		bottomPlatform.tintBottomLeft = 670747;
+		bottomPlatform.tintBottomRight = 670747;
+
+		// lists
+		const platforms = [platform, platform_1, platform_2, bottomPlatform];
+
+		this.platforms = platforms;
 
 		this.events.emit("scene-awake");
 	}
+
+	private platforms!: PlatformPrefab[];
 
 	/* START-USER-CODE */
 

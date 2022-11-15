@@ -29,12 +29,16 @@
             "id": "20aefad0-76e6-47e1-9267-89ed2caf402e",
             "unlock": [
                 "x",
-                "y"
+                "y",
+                "scaleX",
+                "scaleY"
             ],
             "label": "platform",
             "components": [],
             "x": -39,
-            "y": 309
+            "y": 309,
+            "scaleX": 1.3706765916721015,
+            "scaleY": 1
         },
         {
             "prefabId": "a8037339-8a40-431a-90fa-9882ddd6322d",
@@ -71,7 +75,7 @@
                 "tintBottomLeft",
                 "tintBottomRight"
             ],
-            "label": "platformPrefab",
+            "label": "bottomPlatform",
             "components": [],
             "x": 0,
             "y": 536,
@@ -87,5 +91,17 @@
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 3
-    }
+    },
+    "lists": [
+        {
+            "id": "30f8955b-f316-41d4-bbce-2d64dcd8b5b6",
+            "label": "platforms",
+            "objectIds": [
+                "20aefad0-76e6-47e1-9267-89ed2caf402e",
+                "ae9934f6-b603-4e8e-a464-c98bab7eb4b9",
+                "f35f0248-32a4-409d-be78-2f3231bb0dce",
+                "db30483e-82bd-46c4-9084-b88b745f788a"
+            ]
+        }
+    ]
 }

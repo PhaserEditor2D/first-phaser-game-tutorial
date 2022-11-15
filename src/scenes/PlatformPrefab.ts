@@ -5,6 +5,7 @@
 
 import Phaser from "phaser";
 /* START-USER-IMPORTS */
+
 /* END-USER-IMPORTS */
 
 export default interface PlatformPrefab {
@@ -27,7 +28,12 @@ export default class PlatformPrefab extends Phaser.Physics.Arcade.Image {
 		this.body.setSize(400, 32, false);
 
 		/* START-USER-CTR-CODE */
-		// Write your code here.
+
+		this.scene.events.once("scene-awake", () => {
+
+			this.refreshBody();
+		});
+
 		/* END-USER-CTR-CODE */
 	}
 
