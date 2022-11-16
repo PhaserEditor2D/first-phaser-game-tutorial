@@ -1,0 +1,50 @@
+{
+    "id": "47da74db-4f25-4694-9f5b-0e27d2a25a98",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "compilerOutputLanguage": "TYPE_SCRIPT"
+    },
+    "displayList": [
+        {
+            "type": "ArcadeSprite",
+            "id": "2c256ef8-8a55-4a49-bad3-251680d94dba",
+            "label": "player",
+            "components": [],
+            "texture": {
+                "key": "dude",
+                "frame": 0
+            },
+            "x": 57,
+            "y": 40,
+            "body.bounce.x": 0.2,
+            "body.bounce.y": 0.2,
+            "collideWorldBounds": true,
+            "body.width": 32,
+            "body.height": 48
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    },
+    "prefabProperties": [
+        {
+            "name": "autoPlayAnimation",
+            "label": "Auto Play Animation",
+            "tooltip": "The animation to play first.",
+            "defValue": "turn",
+            "customDefinition": false,
+            "type": {
+                "id": "animation-key"
+            }
+        }
+    ]
+}

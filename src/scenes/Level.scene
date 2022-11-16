@@ -29,16 +29,12 @@
             "id": "20aefad0-76e6-47e1-9267-89ed2caf402e",
             "unlock": [
                 "x",
-                "y",
-                "scaleX",
-                "scaleY"
+                "y"
             ],
             "label": "platform",
             "components": [],
             "x": -39,
-            "y": 309,
-            "scaleX": 1.3706765916721015,
-            "scaleY": 1
+            "y": 309
         },
         {
             "prefabId": "a8037339-8a40-431a-90fa-9882ddd6322d",
@@ -83,6 +79,34 @@
             "scaleY": 2,
             "tintBottomLeft": "#0a3c1b",
             "tintBottomRight": "#0a3c1b"
+        },
+        {
+            "prefabId": "47da74db-4f25-4694-9f5b-0e27d2a25a98",
+            "id": "0d931299-318e-44c0-b8b8-c5d6e75910a4",
+            "unlock": [
+                "x",
+                "y",
+                "autoPlayAnimation"
+            ],
+            "label": "player1",
+            "autoPlayAnimation": "left",
+            "components": [],
+            "x": 345,
+            "y": 182
+        },
+        {
+            "prefabId": "47da74db-4f25-4694-9f5b-0e27d2a25a98",
+            "id": "ee17ad0b-64ca-4b83-8c44-8843e2f560d6",
+            "unlock": [
+                "x",
+                "y",
+                "autoPlayAnimation"
+            ],
+            "label": "player2",
+            "autoPlayAnimation": "right",
+            "components": [],
+            "x": 423,
+            "y": 230
         }
     ],
     "plainObjects": [],

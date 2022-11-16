@@ -2,6 +2,11 @@
     "section1": {
         "files": [
             {
+                "url": "assets/animations.json",
+                "type": "animation",
+                "key": "animations"
+            },
+            {
                 "url": "assets/bomb.png",
                 "type": "image",
                 "key": "bomb"
