@@ -113,6 +113,7 @@
                 "autoPlayAnimation"
             ],
             "label": "player",
+            "scope": "CLASS",
             "autoPlayAnimation": "left",
             "components": [],
             "x": 435,
@@ -127,6 +128,24 @@
             "scope": "METHOD",
             "object1": "player",
             "object2": "platformsLayer.list"
+        },
+        {
+            "id": "a290dbf8-4c6a-4d29-b6e7-4f1222cc3843",
+            "type": "Keyboard.Key",
+            "label": "leftKey",
+            "keyCode": "LEFT"
+        },
+        {
+            "id": "307fa4e8-e314-43f7-9c2d-a50b6eeabd31",
+            "type": "Keyboard.Key",
+            "label": "rightKey",
+            "keyCode": "RIGHT"
+        },
+        {
+            "id": "74f33b32-ddb5-4235-ba50-30253728b73e",
+            "type": "Keyboard.Key",
+            "label": "upKey",
+            "keyCode": "UP"
         }
     ],
     "meta": {
