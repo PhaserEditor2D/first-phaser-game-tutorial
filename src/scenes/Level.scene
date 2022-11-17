@@ -25,60 +25,84 @@
             "y": 300
         },
         {
-            "prefabId": "a8037339-8a40-431a-90fa-9882ddd6322d",
-            "id": "20aefad0-76e6-47e1-9267-89ed2caf402e",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "platform",
+            "type": "Layer",
+            "id": "70696797-3612-481b-94bd-c484a3c0ed24",
+            "label": "platformsLayer",
             "components": [],
-            "x": -39,
-            "y": 309
-        },
-        {
-            "prefabId": "a8037339-8a40-431a-90fa-9882ddd6322d",
-            "id": "ae9934f6-b603-4e8e-a464-c98bab7eb4b9",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "platform_1",
-            "components": [],
-            "x": 512,
-            "y": 440
-        },
-        {
-            "prefabId": "a8037339-8a40-431a-90fa-9882ddd6322d",
-            "id": "f35f0248-32a4-409d-be78-2f3231bb0dce",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "platform_2",
-            "components": [],
-            "x": 535,
-            "y": 248
-        },
-        {
-            "prefabId": "a8037339-8a40-431a-90fa-9882ddd6322d",
-            "id": "db30483e-82bd-46c4-9084-b88b745f788a",
-            "unlock": [
-                "x",
-                "y",
-                "scaleX",
-                "scaleY",
-                "tintBottomLeft",
-                "tintBottomRight"
-            ],
-            "label": "bottomPlatform",
-            "components": [],
-            "x": 0,
-            "y": 536,
-            "scaleX": 2,
-            "scaleY": 2,
-            "tintBottomLeft": "#0a3c1b",
-            "tintBottomRight": "#0a3c1b"
+            "list": [
+                {
+                    "prefabId": "a8037339-8a40-431a-90fa-9882ddd6322d",
+                    "id": "20aefad0-76e6-47e1-9267-89ed2caf402e",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "originX",
+                        "originY"
+                    ],
+                    "label": "platform",
+                    "components": [],
+                    "x": 600,
+                    "y": 400,
+                    "originX": 0.5,
+                    "originY": 0.5
+                },
+                {
+                    "prefabId": "a8037339-8a40-431a-90fa-9882ddd6322d",
+                    "id": "ae9934f6-b603-4e8e-a464-c98bab7eb4b9",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "originX",
+                        "originY"
+                    ],
+                    "label": "platform_1",
+                    "components": [],
+                    "x": 50,
+                    "y": 250,
+                    "originX": 0.5,
+                    "originY": 0.5
+                },
+                {
+                    "prefabId": "a8037339-8a40-431a-90fa-9882ddd6322d",
+                    "id": "f35f0248-32a4-409d-be78-2f3231bb0dce",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "originX",
+                        "originY"
+                    ],
+                    "label": "platform_2",
+                    "components": [],
+                    "x": 750,
+                    "y": 220,
+                    "originX": 0.5,
+                    "originY": 0.5
+                },
+                {
+                    "prefabId": "a8037339-8a40-431a-90fa-9882ddd6322d",
+                    "id": "db30483e-82bd-46c4-9084-b88b745f788a",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "scaleX",
+                        "scaleY",
+                        "tintBottomLeft",
+                        "tintBottomRight",
+                        "originX",
+                        "originY"
+                    ],
+                    "label": "bottomPlatform",
+                    "components": [],
+                    "x": 400,
+                    "y": 568,
+                    "scaleX": 2,
+                    "scaleY": 2,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "tintBottomLeft": "#0a3c1b",
+                    "tintBottomRight": "#0a3c1b"
+                }
+            ]
         },
         {
             "prefabId": "47da74db-4f25-4694-9f5b-0e27d2a25a98",
@@ -88,44 +112,27 @@
                 "y",
                 "autoPlayAnimation"
             ],
-            "label": "player1",
+            "label": "player",
             "autoPlayAnimation": "left",
             "components": [],
-            "x": 345,
-            "y": 182
-        },
-        {
-            "prefabId": "47da74db-4f25-4694-9f5b-0e27d2a25a98",
-            "id": "ee17ad0b-64ca-4b83-8c44-8843e2f560d6",
-            "unlock": [
-                "x",
-                "y",
-                "autoPlayAnimation"
-            ],
-            "label": "player2",
-            "autoPlayAnimation": "right",
-            "components": [],
-            "x": 423,
-            "y": 230
+            "x": 435,
+            "y": 184
         }
     ],
-    "plainObjects": [],
+    "plainObjects": [
+        {
+            "id": "184c56d5-0d94-4120-9f1e-8bb04348e870",
+            "type": "Collider",
+            "label": "collider",
+            "scope": "METHOD",
+            "object1": "player",
+            "object2": "platformsLayer.list"
+        }
+    ],
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 3
-    },
-    "lists": [
-        {
-            "id": "30f8955b-f316-41d4-bbce-2d64dcd8b5b6",
-            "label": "platforms",
-            "objectIds": [
-                "20aefad0-76e6-47e1-9267-89ed2caf402e",
-                "ae9934f6-b603-4e8e-a464-c98bab7eb4b9",
-                "f35f0248-32a4-409d-be78-2f3231bb0dce",
-                "db30483e-82bd-46c4-9084-b88b745f788a"
-            ]
-        }
-    ]
+    }
 }
