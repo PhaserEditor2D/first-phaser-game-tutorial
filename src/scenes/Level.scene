@@ -258,6 +258,19 @@
                     "y": -26
                 }
             ]
+        },
+        {
+            "prefabId": "7bc4c980-bcba-4328-a948-a3bd68a0830d",
+            "id": "f697f264-511d-4aa3-abb6-60121491a06d",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "scoreText",
+            "scope": "CLASS",
+            "components": [],
+            "x": 16,
+            "y": 16
         }
     ],
     "plainObjects": [
