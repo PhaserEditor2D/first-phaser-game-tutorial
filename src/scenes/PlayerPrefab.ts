@@ -4,12 +4,16 @@
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
+
 /* START-USER-IMPORTS */
+
+import { ANIM_LEFT, ANIM_RIGHT, ANIM_TURN } from "./animations";
+
 /* END-USER-IMPORTS */
 
 export default interface PlayerPrefab {
 
-	 body: Phaser.Physics.Arcade.Body;
+	body: Phaser.Physics.Arcade.Body;
 }
 
 export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
@@ -24,7 +28,7 @@ export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
 		this.body.setSize(32, 48, false);
 
 		/* START-USER-CTR-CODE */
-		
+
 		this.scene.events.once("scene-awake", () => this.awake());
 
 		/* END-USER-CTR-CODE */
@@ -37,6 +41,29 @@ export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
 	awake() {
 
 		this.play(this.autoPlayAnimation);
+	}
+
+	moveLeft() {
+
+		this.setVelocityX(-160);
+		this.play(ANIM_LEFT, true);
+	}
+
+	moveRight() {
+
+		this.setVelocityX(160);
+		this.play(ANIM_RIGHT, true);
+	}
+
+	stopMoving() {
+
+		this.setVelocityX(0);
+		this.play(ANIM_TURN, true);
+	}
+
+	jump() {
+
+		this.setVelocityY(-330);
 	}
 
 	/* END-USER-CODE */
