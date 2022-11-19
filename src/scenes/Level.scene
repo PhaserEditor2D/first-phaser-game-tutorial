@@ -123,6 +123,7 @@
             "type": "Layer",
             "id": "ec85bfe4-b68f-4093-ac83-014f50ed08d1",
             "label": "starsLayer",
+            "scope": "CLASS",
             "components": [],
             "list": [
                 {
@@ -260,6 +261,14 @@
             ]
         },
         {
+            "type": "Layer",
+            "id": "d2bc3cfd-f7e5-4b41-a8e3-9a8c121f1865",
+            "label": "bombsLayer",
+            "scope": "CLASS",
+            "components": [],
+            "list": []
+        },
+        {
             "prefabId": "7bc4c980-bcba-4328-a948-a3bd68a0830d",
             "id": "f697f264-511d-4aa3-abb6-60121491a06d",
             "unlock": [
@@ -317,6 +326,24 @@
             "object2": "starsLayer.list",
             "overlapOnly": true,
             "collideCallback": "this.collectStar as any",
+            "callbackContext": "this"
+        },
+        {
+            "id": "a60ba5e6-eb13-4966-b5c6-0fbb53629e79",
+            "type": "Collider",
+            "label": "bombs_platforms_collider",
+            "scope": "METHOD",
+            "object1": "bombsLayer.list",
+            "object2": "platformsLayer.list"
+        },
+        {
+            "id": "8b26ddc6-dca8-4f1d-a758-78d17e39c207",
+            "type": "Collider",
+            "label": "player_bombs_collider",
+            "scope": "METHOD",
+            "object1": "player",
+            "object2": "bombsLayer.list",
+            "collideCallback": "this.hitBomb as any",
             "callbackContext": "this"
         }
     ],

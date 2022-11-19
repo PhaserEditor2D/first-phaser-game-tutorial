@@ -7,37 +7,32 @@ import Phaser from "phaser";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
-export default interface StarPrefab {
+export default interface BombPrefab {
 
 	 body: Phaser.Physics.Arcade.Body;
 }
 
-export default class StarPrefab extends Phaser.Physics.Arcade.Image {
+export default class BombPrefab extends Phaser.Physics.Arcade.Image {
 
 	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
-		super(scene, x ?? 177, y ?? 55, texture || "star", frame);
+		super(scene, x ?? 295, y ?? 194, texture || "bomb", frame);
 
 		scene.physics.add.existing(this, false);
-		this.body.setSize(24, 22, false);
+		this.body.bounce.x = 1;
+		this.body.bounce.y = 1;
+		this.body.collideWorldBounds = true;
+		this.body.setSize(14, 14, false);
 
 		/* START-USER-CTR-CODE */
 		
-		this.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+		this.setVelocity(Phaser.Math.Between(-200, 200), 20);
 
 		/* END-USER-CTR-CODE */
 	}
 
 	/* START-USER-CODE */
 
-	collected() {
-		
-		this.disableBody(true, true);
-	}
-
-	resetStar() {
-
-		this.enableBody(true, this.x, 0, true, true);
-	}
+	// Write your code here.
 
 	/* END-USER-CODE */
 }

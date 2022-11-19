@@ -43,6 +43,12 @@ export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
 		this.play(this.autoPlayAnimation);
 	}
 
+	die() {
+
+		this.setTint(0xff0000);
+		this.play(ANIM_TURN);
+	}
+
 	moveLeft() {
 
 		this.setVelocityX(-160);
